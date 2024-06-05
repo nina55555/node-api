@@ -1,0 +1,4 @@
+
+mongodb+srv://Nina:didine555*25@cluster-itv.jmhusmd.mongodb.net/cluster-itv
+
+fait sur mongo db compass - sur insomnia: http://localhost:3000/posts/

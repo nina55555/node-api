@@ -26,4 +26,7 @@ app.use(cors({origin: 'http://localhost:5950/posts'}));
 */
 app.use('/posts', postsRoutes);
 
-app.listen(5950, () => console.log('server connecté merveilleusement sur port: 5950'));
+app.listen(3000, () => console.log('server connecté merveilleusement sur port: 3000'));
+/*
+5950
+*/

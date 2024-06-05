@@ -8,8 +8,24 @@ router.get('/', (req, res) => {
     PostsModel.find((err, docs) => {
         if(!err)res.send(docs);
         else console.log('erreur de recuperation des données:'+err);
+    
     })
 });
+
+
+router.get('/:id', (req, res) => {
+    if(!ObjectID.isValid(req.params.id))
+        return res.status(400).send('ID inconnu :' + req.params.id)
+    
+        PostsModel.findById(
+            req.params.id,
+            (err, docs) => {
+                if(!err)res.send(docs);
+                else console.log('erreur de suppression des données :' + err);
+            }
+        )
+});
+
 
 router.post('/', (req, res) => {
     //console.log(req.body);
